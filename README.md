@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# REACT + FLASK + SQLITE Full-Stack Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React project serving a Flask backend which displays if two strings are anagrams, as well as displays most popular anagram requests among users. The data flows through using RESTful APIs and gets inserted into the database.
 
-## Available Scripts
+# Prerequisites
 
-In the project directory, you can run:
+1. Latest Node version
+2. Pip3
+3. Python3
+4. SQLite (depends)
 
-### `yarn start`
+# Super Simple Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Fire-up the backend
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In a terminal go to the flask-backend directory and run:
+### `pipenv shell`
+### `export FLASK_APP=api`
+### `export FLASK_DEBUG=1`
+### `flask run`
 
-### `yarn test`
+## Fire-up the frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In a terminal, go to the root directory and run:
+### `npm install`
+### `npm start`
 
-### `yarn build`
+## Running
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+At this point, you should have the app up and running on http://localhost:3000/. Most popular anagram requests should be autopopulated from the database. If you try to enter two strings in the textboxes, it will display on the alert window whether the operation was successful or not. The most-popular anagram list will update real-time as you keep on adding valid anagrams. The backend should be able to handle alphanumeric and blank data inputs. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Future Improvements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. The most popular list is currently based off the strings entered through the first textbox, ideally it should recognize it's anagrams and update the same record instead of adding additional ones
+2. The list currently has no cap limit, it can go on and on displaying all anagram entries, showing most used at the top
+3. Backend exceptional handing and OAuth setup could be much better using try,catch and JWT tokens
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
