@@ -1,5 +1,5 @@
 {
-  "name": "fullstackanagrams",
+  "name": "react-flask-sqlite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
